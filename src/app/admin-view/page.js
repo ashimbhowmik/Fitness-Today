@@ -1,13 +1,30 @@
+import GraphChart from "@/components/Dashboard/GraphChart/GraphChart";
+import { allRegisterUsers } from "@/services/allregusers";
+import { getAllOrder } from "@/services/cart";
+import { getAllDoctors } from "@/services/doctors";
+import { getAllAdminProducts } from "@/services/product";
+import { getAllAppoinment } from "@/services/userappoinment";
 import React from "react";
 
-const AdminView = () => {
+export default async function AdminView() {
+  const totalOrderCollection = await getAllOrder();
+  const totalUserFind = await allRegisterUsers();
+  const totalProductCollection = await getAllAdminProducts();
+  const totalDoctorCollection = await getAllDoctors();
+  const totalAppoinmentCollection = await getAllAppoinment();
   return (
-    <div className="flex flex-col ">
-      <section className="p-[200px]">
-        <h1>Helo</h1>
+    <div className="flex flex-col  pt-[150px] pl-[30px]">
+      <section className="border">
+        <GraphChart
+          orderData={totalOrderCollection && totalOrderCollection.data}
+          userData={totalUserFind && totalUserFind.data}
+          appointmentData={
+            totalAppoinmentCollection && totalAppoinmentCollection.data
+          }
+          productData={totalProductCollection && totalProductCollection.data}
+          dcotorData={totalDoctorCollection && totalDoctorCollection.data}
+        ></GraphChart>
       </section>
     </div>
   );
-};
-
-export default AdminView;
+}
