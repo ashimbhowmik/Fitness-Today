@@ -45,7 +45,7 @@ const Layout = ({ children }) => {
                     active === "Dashboard" ? "btn-fill" : "btn-no-fill"
                   }
                   onClick={() => {
-                    // router.push("/admin-view/all-users");
+                    router.push("/admin-view");
                     setActive("Dashboard");
                   }}
                 >
