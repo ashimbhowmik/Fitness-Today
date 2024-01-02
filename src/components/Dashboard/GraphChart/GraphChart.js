@@ -108,7 +108,6 @@ const GraphChart = ({
         ...prev,
         series: [{ ...prev.series[0], data: newOrder }],
       }));
-      console.log(deliveredCount, "amit");
     }
   }, [orderData]);
 
@@ -122,14 +121,14 @@ const GraphChart = ({
 
   useEffect(() => {
     if (productData && orderData && Array.isArray(productData, orderData)) {
-      const totalOrderCost = orderData.reduce((total, item) => {
-        const product = productData.find(
-          (productItem) => productItem._id === item.productID
+      const totalOrderCost = orderData?.reduce((total, item) => {
+        const product = productData?.find(
+          (productItem) => productItem?._id === item?.productID
         );
         const productPrice = product?.price || 0;
         return total + productPrice;
       }, 0);
-      const totalProductCost = productData.reduce((total, item) => {
+      const totalProductCost = productData?.reduce((total, item) => {
         return total + (item.price || 0);
       }, 0);
 
