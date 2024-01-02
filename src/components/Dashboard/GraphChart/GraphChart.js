@@ -114,9 +114,19 @@ const GraphChart = ({
   //  Graph 4
   const [pstate, setPstate] = useState({
     options: {
-      series: [0, 0],
-      labels: ["Total Sell Cost", "Total Cost"],
+      chart: {
+        id: "basic-bar",
+      },
+      xaxis: {
+        categories: ["Total Sell Cost", "Total cost"],
+      },
     },
+    series: [
+      {
+        name: "series-2",
+        data: [0, 0],
+      },
+    ],
   });
 
   useEffect(() => {
