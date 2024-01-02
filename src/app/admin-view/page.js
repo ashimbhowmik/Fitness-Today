@@ -15,7 +15,7 @@ export default async function AdminView() {
   const totalAppoinmentCollection = await getAllAppoinment();
   return (
     <div className="flex flex-col  pt-[150px] pl-[30px]">
-      <section className="border">
+      <section className="border flex">
         <TotalCollection
           dcotorData={totalDoctorCollection && totalDoctorCollection.dcotorData}
           orderData={totalOrderCollection && totalOrderCollection.orderData}
