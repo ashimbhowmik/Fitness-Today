@@ -27,7 +27,6 @@ export default function DeleteButton({ item }) {
         position: toast.POSITION.TOP_CENTER,
       });
       router.refresh();
-      // window.location.reload(false);
     } else {
       toast.error(res.message, {
         position: toast.POSITION.TOP_CENTER,

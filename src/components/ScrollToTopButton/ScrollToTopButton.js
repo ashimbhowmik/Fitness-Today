@@ -13,10 +13,15 @@ const ScrollToTopButton = () => {
         setIsVisible(false);
       }
     };
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", handleScroll);
+    }
 
-    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      if (typeof window !== "undefined") {
+        // Your window-dependent code here
+        window.removeEventListener("scroll", handleScroll);
+      }
     };
   }, []);
 
