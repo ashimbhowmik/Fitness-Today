@@ -1,0 +1,95 @@
+// components/ChatModal.js
+import React, { useState } from 'react';
+
+const ChatModal = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [userInput, setUserInput] = useState('');
+  const [chatMessages, setChatMessages] = useState([]);
+
+  const toggleModal = () => {
+    setIsOpen(!isOpen);
+    setUserInput(''); // Clear user input when opening the modal
+    setChatMessages([]); // Clear chat messages when opening the modal
+  };
+
+  const closeModal = () => {
+    setIsOpen(false);
+  };
+
+  const questionsAndAnswers = [
+    {
+      questionPattern: /your name|what's your name|give your name/i,
+      answer: "I'm Chatbot.",
+    },
+    // Add more question patterns and answers here...
+  ];
+
+  const handleSend = () => {
+    const userMessage = userInput.trim();
+    if (userMessage) {
+      let answer = "Can't find the answer.";
+      for (const { questionPattern, answer: ans } of questionsAndAnswers) {
+        if (questionPattern.test(userMessage.toLowerCase())) {
+          answer = ans;
+          break;
+        }
+      }
+      setChatMessages([...chatMessages, { type: 'user', text: userMessage }, { type: 'bot', text: answer }]);
+      setUserInput('');
+    }
+  };
+
+  return (
+    <div>
+      <button
+        className="fixed left-4 bottom-4 bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600 focus:outline-none"
+        onClick={toggleModal}
+      >
+        Open Chat
+      </button>
+
+      {isOpen && (
+        <div className="fixed left-4 bottom-4 w-96 h-700 flex flex-col bg-white p-4 rounded-lg shadow-lg overflow-y-auto">
+          {/* Close button */}
+          <button
+            className="self-end text-gray-600 hover:text-gray-800 focus:outline-none"
+            onClick={closeModal}
+          >
+            X
+          </button>
+
+          {/* Chat Interface Content */}
+          <div className="flex-1 text-gray-800">
+            <div className="mb-2">Welcome to the Chatbot!</div>
+
+            {/* Display chat messages here */}
+            {chatMessages.map((message, index) => (
+              <div key={index} className={`chat-message ${message.type === 'user' ? 'user' : 'bot'}`}>
+                {message.text}
+              </div>
+            ))}
+
+            {/* User input field */}
+            <input
+              type="text"
+              placeholder="Type your message..."
+              className="w-full px-2 py-1 border rounded border-gray-300 focus:outline-none focus:border-blue-500"
+              value={userInput}
+              onChange={(e) => setUserInput(e.target.value)}
+            />
+
+            {/* Send button */}
+            <button
+              className="mt-2 bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600 focus:outline-none"
+              onClick={handleSend}
+            >
+              Send
+            </button>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default ChatModal;
