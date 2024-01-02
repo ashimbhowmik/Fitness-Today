@@ -39,6 +39,20 @@ const GraphChart = ({ userData, orderData, appointmentData, productData }) => {
     },
   });
 
+  useEffect(() => {
+    if (productData && Array.isArray(productData)) {
+      const positiveCount =
+        productData?.filter((item) => item?.priceDrop > 0)?.length || 0;
+      const negativeCount =
+        productData?.filter((item) => item?.priceDrop <= 0)?.length || 0;
+
+      setDstate((prev) => ({
+        ...prev,
+        series: [positiveCount, negativeCount],
+      }));
+    }
+  }, [productData]);
+
   // Dynamically import Chart component on the client side
   const Chart = React.lazy(() => import("react-apexcharts"));
 
@@ -58,6 +72,18 @@ const GraphChart = ({ userData, orderData, appointmentData, productData }) => {
                   width="500"
                 />
               )}
+          </React.Suspense>
+        </div>
+        <div>
+          <React.Suspense fallback={<div>Loading...</div>}>
+            {typeof window !== "undefined" && productData && (
+              <Chart
+                options={dstate.options}
+                series={dstate.series}
+                type="donut"
+                width="380"
+              />
+            )}
           </React.Suspense>
         </div>
       </section>

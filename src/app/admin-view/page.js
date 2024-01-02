@@ -1,4 +1,5 @@
 import GraphChart from "@/components/Dashboard/GraphChart/GraphChart";
+import TotalCollection from "@/components/Dashboard/TotalCollection/TotalCollection";
 import { allRegisterUsers } from "@/services/allregusers";
 import { getAllOrder } from "@/services/cart";
 import { getAllDoctors } from "@/services/doctors";
@@ -15,6 +16,18 @@ export default async function AdminView() {
   return (
     <div className="flex flex-col  pt-[150px] pl-[30px]">
       <section className="border">
+        <TotalCollection
+          dcotorData={totalDoctorCollection && totalDoctorCollection.dcotorData}
+          orderData={totalOrderCollection && totalOrderCollection.orderData}
+          userData={totalUserFind && totalUserFind.userData}
+          productData={
+            totalProductCollection && totalProductCollection.productData
+          }
+          appointmentData={
+            totalAppoinmentCollection &&
+            totalAppoinmentCollection.appointmentData
+          }
+        ></TotalCollection>
         <GraphChart
           orderData={totalOrderCollection && totalOrderCollection.data}
           userData={totalUserFind && totalUserFind.data}
