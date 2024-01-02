@@ -3,7 +3,7 @@ import Cookies from "js-cookie";
 export const addNewAddress = async (formData) => {
   try {
     const res = await fetch(
-      "https://new-defence-project-ashimbhowmik.vercel.app/api/address/add-new-address",
+      "https://extra-project-defence-ashimbhowmik.vercel.app/api/address/add-new-address",
       {
         method: "POST",
         headers: {
@@ -25,7 +25,7 @@ export const addNewAddress = async (formData) => {
 export const fetchAllAddresses = async (id) => {
   try {
     const res = await fetch(
-      `https://new-defence-project-ashimbhowmik.vercel.app/api/address/get-all-address?id=${id}`,
+      `https://extra-project-defence-ashimbhowmik.vercel.app/api/address/get-all-address?id=${id}`,
       {
         method: "GET",
         headers: {
@@ -45,7 +45,7 @@ export const fetchAllAddresses = async (id) => {
 export const getAllAddress = async () => {
   try {
     const res = await fetch(
-      "https://new-defence-project-ashimbhowmik.vercel.app/api/address/get-address",
+      "https://extra-project-defence-ashimbhowmik.vercel.app/api/address/get-address",
       {
         method: "GET",
         cache: "no-store",
@@ -63,7 +63,7 @@ export const getAllAddress = async () => {
 export const updateAddress = async (formData) => {
   try {
     const res = await fetch(
-      "https://new-defence-project-ashimbhowmik.vercel.app/api/address/update-address",
+      "https://extra-project-defence-ashimbhowmik.vercel.app/api/address/update-address",
       {
         method: "PUT",
         headers: {

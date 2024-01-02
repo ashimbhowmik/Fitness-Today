@@ -22,7 +22,7 @@ export const addToCart = async (formData) => {
 export const getAllCartItems = async (id) => {
   try {
     const res = await fetch(
-      `https://new-defence-project-ashimbhowmik.vercel.app/api/cart/all-cart-items?id=${id}`,
+      `https://extra-project-defence-ashimbhowmik.vercel.app/api/cart/all-cart-items?id=${id}`,
       {
         method: "GET",
         headers: {
@@ -41,7 +41,7 @@ export const getAllCartItems = async (id) => {
 export const getAllOrder = async () => {
   try {
     const res = await fetch(
-      "https://new-defence-project-ashimbhowmik.vercel.app/api/cart/get-all-order",
+      "https://extra-project-defence-ashimbhowmik.vercel.app/api/cart/get-all-order",
       {
         method: "GET",
         cache: "no-store",

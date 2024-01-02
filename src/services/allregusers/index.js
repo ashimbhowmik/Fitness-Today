@@ -1,7 +1,7 @@
 export const allRegisterUsers = async () => {
   try {
     const res = await fetch(
-      "https://new-defence-project-ashimbhowmik.vercel.app/api/allregisterusers",
+      "https://extra-project-defence-ashimbhowmik.vercel.app/api/allregisterusers",
       {
         method: "GET",
         cache: "no-store",
@@ -41,7 +41,7 @@ export const updateUser = async (formData) => {
 export const updateUserRoleChange = async (updatedUser) => {
   try {
     const res = await fetch(
-      "https://new-defence-project-ashimbhowmik.vercel.app/api/admin/updateUserRole",
+      "https://extra-project-defence-ashimbhowmik.vercel.app/api/admin/updateUserRole",
       {
         method: "PUT",
         headers: {
@@ -63,7 +63,7 @@ export const updateUserRoleChange = async (updatedUser) => {
 export const deleteUsers = async (id) => {
   try {
     const res = await fetch(
-      `https://new-defence-project-ashimbhowmik.vercel.app/api/admin/delete-user?id=${id}`,
+      `https://extra-project-defence-ashimbhowmik.vercel.app/api/admin/delete-user?id=${id}`,
       {
         method: "DELETE",
         headers: {

@@ -23,7 +23,7 @@ export const newAppoinmentUser = async (formData) => {
 export const getAllAppoinment = async () => {
   try {
     const res = await fetch(
-      "https://new-defence-project-ashimbhowmik.vercel.app/api/admin/all-appoinment",
+      "https://extra-project-defence-ashimbhowmik.vercel.app/api/admin/all-appoinment",
       {
         method: "GET",
         cache: "no-store",
@@ -41,7 +41,7 @@ export const getAllAppoinment = async () => {
 export const deleteAppoinment = async (id) => {
   try {
     const res = await fetch(
-      `https://new-defence-project-ashimbhowmik.vercel.app/api/admin/delete-appoinment?id=${id}`,
+      `https://extra-project-defence-ashimbhowmik.vercel.app/api/admin/delete-appoinment?id=${id}`,
       {
         method: "DELETE",
         headers: {

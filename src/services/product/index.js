@@ -27,7 +27,7 @@ export const addNewProduct = async (formData) => {
 export const getAllAdminProducts = async () => {
   try {
     const res = await fetch(
-      "https://new-defence-project-ashimbhowmik.vercel.app/api/admin/all-products",
+      "https://extra-project-defence-ashimbhowmik.vercel.app/api/admin/all-products",
       {
         method: "GET",
         cache: "no-store",
@@ -99,7 +99,7 @@ export const deleteAProduct = async (id) => {
 export const productById = async (id) => {
   try {
     const res = await fetch(
-      `https://new-defence-project-ashimbhowmik.vercel.app/api/admin/product-by-id?id=${id}`,
+      `https://extra-project-defence-ashimbhowmik.vercel.app/api/admin/product-by-id?id=${id}`,
       {
         method: "GET",
         cache: "no-store",
@@ -116,7 +116,7 @@ export const productById = async (id) => {
 export const updateUsserOrderStatus = async (userOrders) => {
   try {
     const res = await fetch(
-      "https://new-defence-project-ashimbhowmik.vercel.app/api/admin/update-order",
+      "https://extra-project-defence-ashimbhowmik.vercel.app/api/admin/update-order",
       {
         method: "PUT",
         headers: {

@@ -23,7 +23,7 @@ export const addNewDoctor = async (formData) => {
 export const getAllDoctors = async () => {
   try {
     const res = await fetch(
-      "https://new-defence-project-ashimbhowmik.vercel.app/api/admin/all-doctors",
+      "https://extra-project-defence-ashimbhowmik.vercel.app/api/admin/all-doctors",
       {
         method: "GET",
         cache: "no-store",
@@ -41,7 +41,7 @@ export const getAllDoctors = async () => {
 export const searchDoctors = async () => {
   try {
     const res = await fetch(
-      "https://new-defence-project-ashimbhowmik.vercel.app/api/admin/all-doctors",
+      "https://extra-project-defence-ashimbhowmik.vercel.app/api/admin/all-doctors",
       {
         method: "GET",
         cache: "no-store",
@@ -59,7 +59,7 @@ export const searchDoctors = async () => {
 export const deleteDoctor = async (id) => {
   try {
     const res = await fetch(
-      `https://new-defence-project-ashimbhowmik.vercel.app/api/admin/delete-doctor?id=${id}`,
+      `https://extra-project-defence-ashimbhowmik.vercel.app/api/admin/delete-doctor?id=${id}`,
       {
         method: "DELETE",
         headers: {
@@ -79,7 +79,7 @@ export const deleteDoctor = async (id) => {
 export const doctorById = async (id) => {
   try {
     const res = await fetch(
-      `https://new-defence-project-ashimbhowmik.vercel.app/api/admin/doctor-by-id?id=${id}`,
+      `https://extra-project-defence-ashimbhowmik.vercel.app/api/admin/doctor-by-id?id=${id}`,
       {
         method: "GET",
         cache: "no-store",
@@ -97,7 +97,7 @@ export const doctorById = async (id) => {
 export const doctorListed = async (updatedUser) => {
   try {
     const res = await fetch(
-      "https://new-defence-project-ashimbhowmik.vercel.app/api/admin/update-doctor",
+      "https://extra-project-defence-ashimbhowmik.vercel.app/api/admin/update-doctor",
       {
         method: "PUT",
         headers: {
