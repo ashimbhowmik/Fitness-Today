@@ -14,29 +14,31 @@ export default async function AdminView() {
   const totalDoctorCollection = await getAllDoctors();
   const totalAppoinmentCollection = await getAllAppoinment();
   return (
-    <div className="flex flex-col  pt-[150px] pl-[30px]">
-      <section className="border flex">
-        <TotalCollection
-          dcotorData={totalDoctorCollection && totalDoctorCollection.dcotorData}
-          orderData={totalOrderCollection && totalOrderCollection.orderData}
-          userData={totalUserFind && totalUserFind.userData}
-          productData={
-            totalProductCollection && totalProductCollection.productData
-          }
-          appointmentData={
-            totalAppoinmentCollection &&
-            totalAppoinmentCollection.appointmentData
-          }
-        ></TotalCollection>
-        <GraphChart
-          orderData={totalOrderCollection && totalOrderCollection.data}
-          userData={totalUserFind && totalUserFind.data}
-          appointmentData={
-            totalAppoinmentCollection && totalAppoinmentCollection.data
-          }
-          productData={totalProductCollection && totalProductCollection.data}
-          dcotorData={totalDoctorCollection && totalDoctorCollection.data}
-        ></GraphChart>
+    <div className="flex flex-col w-full pt-[150px] pl-[30px]">
+      <section className=" ">
+        <h1 className="text-2xl mb-8 font-bold">Dashboard</h1>
+        <div className="">
+          <TotalCollection
+            orderData={totalOrderCollection && totalOrderCollection.data}
+            userData={totalUserFind && totalUserFind.data}
+            appointmentData={
+              totalAppoinmentCollection && totalAppoinmentCollection.data
+            }
+            productData={totalProductCollection && totalProductCollection.data}
+            dcotorData={totalDoctorCollection && totalDoctorCollection.data}
+          ></TotalCollection>
+        </div>
+        <div>
+          <GraphChart
+            orderData={totalOrderCollection && totalOrderCollection.data}
+            userData={totalUserFind && totalUserFind.data}
+            appointmentData={
+              totalAppoinmentCollection && totalAppoinmentCollection.data
+            }
+            productData={totalProductCollection && totalProductCollection.data}
+            dcotorData={totalDoctorCollection && totalDoctorCollection.data}
+          ></GraphChart>
+        </div>
       </section>
     </div>
   );
