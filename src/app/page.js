@@ -7,6 +7,7 @@ import FitnessClass from "@/components/Home/FitnessClass/FitnessClass";
 import FitnessMotive from "@/components/Home/FitnessMotive/FitnessMotive";
 import DemoProduct from "@/components/Home/DemoProduct/DemoProduct";
 import About from "@/components/Home/About/About";
+import Pricing from "@/components/Home/Pricing";
 
 export default function Home() {
   return (
@@ -100,6 +101,7 @@ export default function Home() {
           </button>
         </div>
       </section>
+      <Pricing></Pricing>
       <FitnessMotive></FitnessMotive>
       <FitnessClass></FitnessClass>
       <DemoProduct></DemoProduct>
