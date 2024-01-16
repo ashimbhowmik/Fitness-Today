@@ -6,12 +6,12 @@ const FitnessMotive = () => {
   return (
     <main className="2xl:pt-[100px] pt-[80px] pb-[50px] bg-black">
       <section className="2xl:w-[75%] w-[90%] m-auto">
-        <div className="2xl:flex">
-          <div className="2xl:w-[70%]">
-            <h1 className="text-[#0E86A6] 2xl:text-5xl text-center 2xl:text-left text-3xl font-bold 2xl:mb-4">
+        <div className="2xl:flex xl:flex xl:gap-20">
+          <div className="2xl:w-[70%] xl:w-[60%]">
+            <h1 className="text-[#0E86A6] 2xl:text-5xl xl:text-4xl text-center xl:text-left 2xl:text-left text-3xl font-bold 2xl:mb-4">
               Why Should Everyone Need Fitness
             </h1>
-            <h1 className="text-[#0E86A6] 2xl:text-[42px] text-center text-2xl 2xl:text-left font-bold">
+            <h1 className="text-[#0E86A6] 2xl:text-[42px] xl:text-[30px] mt-2 xl:text-left text-center text-2xl 2xl:text-left font-bold">
               Daily Life
             </h1>
             <div className="mt-7">
@@ -104,9 +104,9 @@ const FitnessMotive = () => {
               </div>
             </div>
           </div>
-          <div className="2xl:w-[30%] mt-10 lg:mt-0 relative">
+          <div className="2xl:w-[30%] xl:w-[35%]  mt-10 lg:mt-0 relative">
             <Image src={img1} alt="" objectFit="cover" className="rounded-xl" />
-            <div className="absolute inset-0 bg-black opacity-50"></div>
+            <div className="absolute inset-0 bg-black opacity-50 xl:w-[full]"></div>
           </div>
         </div>
       </section>
