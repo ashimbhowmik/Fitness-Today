@@ -54,13 +54,13 @@ const Login = () => {
       Cookies.set("token", res?.finalData?.token);
       localStorage.setItem("user", JSON.stringify(res?.finalData?.user));
 
-      // Check the user's role and navigate accordingly
-      if (userRole === "customer") {
-        router.push("/");
-      } else if (userRole === "admin" || userRole === "developer") {
-        router.push("/admin-view");
-      }
-
+      setTimeout(() => {
+        if (userRole === "customer") {
+          router.push("/");
+        } else if (userRole === "admin" || userRole === "developer") {
+          router.push("/admin-view");
+        }
+      }, 1000);
       setComponentLevelLoader({ loading: false, id: "" });
     } else {
       toast.error(res.message, {
