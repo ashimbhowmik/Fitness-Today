@@ -1,14 +1,24 @@
 import mongoose from "mongoose";
 import connectToDB from "@/database";
-// import User from "@/models/user";
 import { hash } from "bcrypt";
 import Joi from "joi";
 import { NextResponse } from "next/server";
 import RegUsers from "@/models/reg-users";
 
+const validEmailDomains = ["gmail.com", "diu.edu.bd"]; // Add more valid domains as needed
+
 const schema = Joi.object({
   name: Joi.string().required(),
-  email: Joi.string().email().required(),
+  email: Joi.string()
+    .email({ tlds: { allow: false } }) // Ensures it's a valid email format
+    .custom((value, helpers) => {
+      const [, domain] = value.split("@");
+      if (!validEmailDomains.includes(domain)) {
+        return helpers.error("any.invalid");
+      }
+      return value;
+    }, "custom validation")
+    .required(),
   password: Joi.string().min(6).required(),
   age: Joi.string().required(),
   role: Joi.string().required(),
@@ -18,7 +28,6 @@ export async function POST(req, res) {
   await connectToDB();
 
   const { name, email, password, age, role } = await req.json();
-  //validate the schema
 
   const { error } = schema.validate({
     name,
@@ -37,8 +46,6 @@ export async function POST(req, res) {
   }
 
   try {
-    //check if the user already exists or not
-
     const isUserAlreadyExists = await RegUsers.findOne({ email });
 
     if (isUserAlreadyExists) {
