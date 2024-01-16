@@ -14,7 +14,6 @@ import Cookies from "js-cookie";
 import { toast } from "react-toastify";
 import Notification from "@/components/Notification/Notification";
 import PageLoader from "@/components/Loader/PageLoader/PageLoader";
-import Forgot from "@/app/product/listing/forgotpass/page";
 
 const initialFormdata = {
   email: "",
@@ -60,7 +59,7 @@ const Login = () => {
         } else if (userRole === "admin" || userRole === "developer") {
           router.push("/admin-view");
         }
-      }, 1000);
+      }, 2000);
       setComponentLevelLoader({ loading: false, id: "" });
     } else {
       toast.error(res.message, {

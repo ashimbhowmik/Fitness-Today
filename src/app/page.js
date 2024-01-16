@@ -24,7 +24,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-black opacity-70"></div>
         </div>
 
-        <div className="absolute left-[15px] top-[150px] 2xl:left-[550px] 2xl:top-[230px] text-white">
+        <div className="absolute left-[15px] top-[150px] xl:left-[18%] 2xl:left-[480px] 2xl:top-[230px] text-white">
           <div>
             <h1 className="text-2xl md:text-5xl lg:text-6xl xl:text-6xl 2xl:text-6xl font-bold mb-7">
               Transform your life through fitness
@@ -34,7 +34,7 @@ export default function Home() {
             </p>
           </div>
         </div>
-        <div className="absolute 2xl:right-[70px] right-[30px] top-[350px] 2xl:top-[270px]">
+        <div className="absolute 2xl:right-[70px] right-[30px] xl:top-[38%] top-[350px] 2xl:top-[270px]">
           <div className="flex flex-col">
             <button>
               <svg
@@ -95,7 +95,7 @@ export default function Home() {
             </button>
           </div>
         </div>
-        <div className="absolute left-[160px] bottom-[190px] 2xl:left-[980px] 2xl:bottom-[260px]">
+        <div className="absolute left-[160px] bottom-[190px] xl:left-[46%] xl:bottom-[25%] 2xl:left-[915px] 2xl:bottom-[260px]">
           <button className="px-5 py-2 hover:bg-orange-500 bg-yellow-500 font-semibold rounded-2xl ease-in-out duration-200">
             Get Started
           </button>

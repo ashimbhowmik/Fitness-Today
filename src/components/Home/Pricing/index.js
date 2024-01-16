@@ -13,9 +13,9 @@ export default async function Pricing() {
   const totalDoctorCollection = await getAllDoctors();
   const totalAppoinmentCollection = await getAllAppoinment();
   return (
-    <div className="flex flex-col w-full  bg-black">
+    <div className="flex flex-col w-full bg-black">
       <section className=" ">
-        <div className="">
+        <div className="xl:w-[90%] xl:mx-auto 2xl:w-full">
           <TotalList
             orderData={totalOrderCollection && totalOrderCollection.data}
             userData={totalUserFind && totalUserFind.data}
