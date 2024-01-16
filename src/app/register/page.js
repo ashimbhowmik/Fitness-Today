@@ -47,26 +47,57 @@ const Register = () => {
 
   async function handleRegisterOnSubmit() {
     setPageLevelLoader(true);
-    const data = await registerNewUser(formData);
 
-    if (data?.success) {
-      toast.success(data.message, {
-        position: toast.POSITION.TOP_CENTER,
-      });
-      setIsRegistered(true);
-      setPageLevelLoader(false);
-      setFormData(initialFormData);
+    try {
+      const response = await registerNewUser(formData);
 
-      // Update the updatedData in the context
-      if (updatedData) {
-        const updatedUserData = [...updatedData];
-        updatedUserData.push(data.user); // Assuming your response contains the updated user data
-        updateData(updatedUserData);
+      if (response?.success) {
+        toast.success(response.message, {
+          position: toast.POSITION.TOP_CENTER,
+        });
+        setIsRegistered(true);
+        setPageLevelLoader(false);
+        setFormData(initialFormData);
+
+        // Update the updatedData in the context
+        if (updatedData) {
+          const updatedUserData = [...updatedData];
+          updatedUserData.push(response.user);
+          updateData(updatedUserData);
+        }
+
+        // Redirect to login page
+
+        setTimeout(() => {
+          router.push("/login");
+        }, 2000);
       }
-    } else {
-      toast.error(data?.message, {
-        position: toast.POSITION.TOP_CENTER,
-      });
+      if (!response?.success) {
+        toast.error(response.message, {
+          position: toast.POSITION.TOP_CENTER,
+        });
+        setPageLevelLoader(false);
+        setFormData(initialFormData);
+      }
+    } catch (error) {
+      console.error("Error during registration:", error);
+
+      // Check for SyntaxError: Unexpected end of JSON input
+      if (
+        error instanceof SyntaxError &&
+        error.message === "Unexpected end of JSON input"
+      ) {
+        // Show an alert for this specific error
+        toast.error("Registration failed. Please try again later.", {
+          position: toast.POSITION.TOP_CENTER,
+        });
+      } else {
+        // Show a generic error toast for other errors
+        toast.error("Registration failed. Please try again later.", {
+          position: toast.POSITION.TOP_CENTER,
+        });
+      }
+
       setPageLevelLoader(false);
       setFormData(initialFormData);
     }
