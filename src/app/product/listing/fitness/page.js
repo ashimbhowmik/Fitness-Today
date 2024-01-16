@@ -80,7 +80,7 @@ const Fitness = () => {
                 setView("armExercise");
               }}
             >
-              Yoga Exercise
+              Arm Exercise
             </button>
 
             <button
