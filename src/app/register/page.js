@@ -154,7 +154,6 @@ const Register = () => {
                       disabled={!isFormValid()}
                       onClick={() => {
                         handleRegisterOnSubmit();
-                        router.push("/login");
                       }}
                     >
                       {pageLevelLoader ? <p>Registering</p> : "Register"}
