@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <main>
       <section className="relative mt-[99px]">
-        <div className="relative h-[500px] md:h-[500px] lg:h-[500px] xl:h-[500px] 2xl:h-[700px]">
+        <div className="relative h-[400px] md:h-[500px] lg:h-[500px] xl:h-[500px] 2xl:h-[700px]">
           <Image
             src={img}
             alt=""
@@ -24,9 +24,9 @@ export default function Home() {
           <div className="absolute inset-0 bg-black opacity-70"></div>
         </div>
 
-        <div className="absolute left-[15px] top-[150px] xl:left-[18%] 2xl:left-[480px] 2xl:top-[230px] text-white">
+        <div className="absolute left-[15px] top-[100px] xl:left-[14%] 2xl:left-[480px] 2xl:top-[230px] text-white">
           <div>
-            <h1 className="text-2xl md:text-5xl lg:text-6xl xl:text-6xl 2xl:text-6xl font-bold mb-7">
+            <h1 className="text-2xl md:text-5xl lg:text-6xl xl:text-6xl text-center 2xl:text-6xl font-bold lg:mb-7">
               Transform your life through fitness
             </h1>
             <p className="mb-3 text-xl md:text-3xl lg:text-6xl xl:text-6xl 2xl:text-6xl font-bold text-center">
@@ -34,7 +34,7 @@ export default function Home() {
             </p>
           </div>
         </div>
-        <div className="absolute 2xl:right-[70px] right-[30px] xl:top-[38%] top-[350px] 2xl:top-[270px]">
+        <div className="absolute 2xl:right-[70px] right-[30px] xl:top-[38%] top-[200px] 2xl:top-[270px]">
           <div className="flex flex-col">
             <button>
               <svg
@@ -95,8 +95,8 @@ export default function Home() {
             </button>
           </div>
         </div>
-        <div className="absolute left-[160px] bottom-[190px] xl:left-[46%] xl:bottom-[25%] 2xl:left-[915px] 2xl:bottom-[260px]">
-          <button className="px-5 py-2 hover:bg-orange-500 bg-yellow-500 font-semibold rounded-2xl ease-in-out duration-200">
+        <div className="absolute left-[130px] bottom-[160px] xl:left-[46%] xl:bottom-[25%] 2xl:left-[915px] 2xl:bottom-[260px]">
+          <button className="lg:px-5 px-5 py-1 lg:py-2 hover:bg-orange-500 bg-yellow-500 font-semibold rounded-2xl ease-in-out duration-200">
             Get Started
           </button>
         </div>
@@ -106,7 +106,6 @@ export default function Home() {
       <FitnessClass></FitnessClass>
       <DemoProduct></DemoProduct>
       <About></About>
-
       <Footer />
     </main>
   );
