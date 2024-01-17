@@ -86,7 +86,7 @@ export default function ClientProduct({ item }) {
           </button>
         </div>
       </div>
-      <div className="absolute bottom-[-18px] 2xl:left-[123px] lg:left-[95px] left-[105px]">
+      <div className="absolute bottom-[-18px] 2xl:left-[123px] lg:left-[95px] left-[30%]">
         <ClientButton item={item} />
       </div>
     </div>

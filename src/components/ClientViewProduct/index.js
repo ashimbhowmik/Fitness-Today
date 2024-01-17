@@ -144,7 +144,7 @@ export default function ClientViewProduct({ data }) {
   }
 
   return (
-    <main className="py-12 mt-16 sm:py-16 h-full ">
+    <main className="py-12 mt-10 lg:mt-16 sm:py-16 h-full ">
       <section className="lg:w-[79%] w-[85%]  m-auto  pb-14 border-b lg:flex-row-reverse mb-5 mt-5 xl:flex 2xl:flex flex flex-col gap-5 lg:flex justify-between ">
         <div className="xl:flex  rounded-lg">
           <fieldset className="w-full space-y-1  dark:text-gray-100">
@@ -168,7 +168,7 @@ export default function ClientViewProduct({ data }) {
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Search..."
-                className="border py-[10px] pl-10 px-28 xl:px-24 2xl:px-24 text-sm rounded-lg !rounded-e-none sm:w-auto focus:outline-none bg-white text-black focus:dark:border-sky-400"
+                className="border py-[10px] pl-10 px-[50px] xl:px-24 2xl:px-24 text-sm rounded-lg !rounded-e-none sm:w-auto focus:outline-none bg-white text-black focus:dark:border-sky-400"
               />
               <button
                 className="  bg-blue-400 py-[9px] px-3 rounded-lg !rounded-s-none"
@@ -216,7 +216,6 @@ export default function ClientViewProduct({ data }) {
       </div>
 
       <div className=" lg:pt-6  pb-12 sm:px-6 lg:px-8">
-        {/* text-4xl md:text-5xl lg:text-5xl xl:text-5xl lg:text-5xl */}
         <div className="mt-10 grid gap-10 2xl:grid-cols-4 2xl:gap-16 md:grid-cols-2 md:gap-16 lg:grid-cols-3 lg:gap-16 xl:grid-cols-3 xl:gap-16 lg:mt-10 w-[82%] m-auto">
           {productsToInclude.length ? (
             productsToInclude.map((item) => (

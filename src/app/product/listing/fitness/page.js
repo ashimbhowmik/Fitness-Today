@@ -16,7 +16,6 @@ import {
 } from "@/services/exercise";
 
 const Fitness = () => {
-  // const getAllProducts = await getAllAdminProducts();
   const [view, setView] = useState("armExercise");
   const [getALlLeg, setGetALlLeg] = useState([]);
   useEffect(() => {
@@ -61,7 +60,7 @@ const Fitness = () => {
   }, []);
   return (
     <div>
-      <div className="lg:h-[550px] h-[350px]">
+      <div className="lg:h-[550px] h-[300px]">
         <Image
           src={img2}
           alt=""
@@ -106,7 +105,7 @@ const Fitness = () => {
           </div>
           <section className="2xl:px-[200px] 2xl:py-[30px] xl:flex xl:flex-row xl:w-[95%] 2xl:w-full mx-auto  flex flex-col-reverse 2xl:flex 2xl:flex-row justify-center">
             <div className="2xl:w-[75%] xl:w-[75%] p-3">
-              <h1 className="text-4xl font-bold mb-10 mt-2">
+              <h1 className="lg:text-4xl text-3xl text-center lg:text-left font-bold mb-10 mt-2">
                 Find Your Suitable Exercise
               </h1>
               {view === "armExercise" ? (
@@ -117,7 +116,7 @@ const Fitness = () => {
                 <LegExercise data={getALlLeg} />
               )}
             </div>
-            <div className="lg:w-[25%] w-[95%] mx-auto mt-5">
+            <div className="lg:w-[25%] w-[95%] hidden lg:block mx-auto mt-5">
               <section className="flex gap-4">
                 <div className="flex items-center mt-2">
                   <Image
