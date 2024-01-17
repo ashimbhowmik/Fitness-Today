@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <main>
       <section className="relative mt-[99px]">
-        <div className="relative h-[400px] md:h-[500px] lg:h-[500px] xl:h-[500px] 2xl:h-[700px]">
+        <div className="relative h-[350px] md:h-[500px] lg:h-[500px] xl:h-[500px] 2xl:h-[700px]">
           <Image
             src={img}
             alt=""
@@ -34,7 +34,7 @@ export default function Home() {
             </p>
           </div>
         </div>
-        <div className="absolute 2xl:right-[70px] right-[30px] xl:top-[38%] top-[200px] 2xl:top-[270px]">
+        <div className="absolute 2xl:right-[70px] right-[30px] xl:top-[38%] top-[180px] 2xl:top-[270px]">
           <div className="flex flex-col">
             <button>
               <svg
@@ -95,7 +95,7 @@ export default function Home() {
             </button>
           </div>
         </div>
-        <div className="absolute left-[130px] bottom-[160px] xl:left-[46%] xl:bottom-[25%] 2xl:left-[915px] 2xl:bottom-[260px]">
+        <div className="absolute hidden lg:block left-[130px] bottom-[160px] xl:left-[46%] xl:bottom-[25%] 2xl:left-[915px] 2xl:bottom-[260px]">
           <button className="lg:px-5 px-5 py-1 lg:py-2 hover:bg-orange-500 bg-yellow-500 font-semibold rounded-2xl ease-in-out duration-200">
             Get Started
           </button>

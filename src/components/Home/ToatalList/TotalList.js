@@ -2,7 +2,7 @@ import React from "react";
 
 const TotalList = ({ userData, orderData, productData, dcotorData }) => {
   return (
-    <div className="lg:pt-20">
+    <div className="lg:pt-20 text-white">
       <section className="my-6 2xl:w-[75%] xl:w-[100%] w-[90%] m-auto">
         <div className=" grid grid-cols-2 2xl:gap-10 gap-4 mx-auto sm:grid-cols-2 xl:grid-cols-4">
           <div className="flex p-4 space-x-4 rounded-lg md:space-x-6 dark:bg-gray-900 dark:text-gray-100">
