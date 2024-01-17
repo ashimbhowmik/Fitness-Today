@@ -12,7 +12,7 @@ import Pricing from "@/components/Home/Pricing";
 export default function Home() {
   return (
     <main>
-      <section className="relative mt-[99px]">
+      <section className="relative lg:mt-[99px] mt-[50px]">
         <div className="relative h-[350px] md:h-[500px] lg:h-[500px] xl:h-[500px] 2xl:h-[700px]">
           <Image
             src={img}

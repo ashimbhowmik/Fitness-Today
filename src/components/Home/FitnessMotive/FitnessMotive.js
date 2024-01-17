@@ -4,7 +4,7 @@ import img1 from "../../../assests/motive.jpg";
 
 const FitnessMotive = () => {
   return (
-    <main className="2xl:pt-[100px] pt-[80px] pb-[50px] bg-black">
+    <main className="2xl:pt-[100px] pt-[30px] pb-[50px] bg-black">
       <section className="2xl:w-[75%] w-[90%] m-auto">
         <div className="2xl:flex xl:flex xl:gap-20">
           <div className="2xl:w-[70%] xl:w-[60%]">
