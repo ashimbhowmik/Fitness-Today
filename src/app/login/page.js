@@ -71,8 +71,8 @@ const Login = () => {
   }
 
   return (
-    <div className="bg-[#ECF3FE] flex flex-col 2xl:pb-[200px]  pt-[60px] pb-[250px] xl:pb-[100px]">
-      <div className="lg:flex lg:p-16 2xl:mt-[50px] xl:mt-[15px] flex-row-reverse">
+    <div className="bg-[#ECF3FE] flex flex-col 2xl:pb-[200px] xl:pt-0 pt-[60px] pb-[250px] xl:pb-[100px]">
+      <div className="lg:flex lg:p-16 2xl:mt-[50px] xl:mt-[10px] flex-row-reverse">
         <div className="w-[50%] hidden lg:flex justify-center items-center pt-24">
           <Image
             src={img}
@@ -98,7 +98,7 @@ const Login = () => {
                     src={img1}
                     alt=""
                     fill={false}
-                    className="2xl:h-[200px] 2xl:w-[200px] xl:h-[150px] xl:w-[150px] w-[150px] h-[150px]"
+                    className="2xl:h-[200px] 2xl:w-[200px] xl:h-[130px] xl:w-[130px] w-[140px] h-[140px]"
                   ></Image>
                 </div>
                 <p className="w-full lg:text-4xl text-3xl 2xl:mb-3 xl:mb-1 mb-1 font-medium text-center font-serif">
