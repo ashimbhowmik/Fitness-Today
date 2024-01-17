@@ -147,9 +147,9 @@ export default function ClientViewProduct({ data }) {
     <main className="py-12 mt-10 lg:mt-16 sm:py-16 h-full ">
       <section className="lg:w-[79%] w-[85%]  m-auto  pb-14 border-b lg:flex-row-reverse mb-5 mt-5 xl:flex 2xl:flex flex flex-col gap-5 lg:flex justify-between ">
         <div className="xl:flex  rounded-lg">
-          <fieldset className="w-full space-y-1  dark:text-gray-100">
-            <div className="relative flex items-center rounded-lg ">
-              <span className="absolute inset-y-0 left-0 flex items-center pl-2">
+          <fieldset className="w-full space-y-1  flex justify-center dark:text-gray-100">
+            <div className="relative flex items-center w-full   rounded-lg">
+              <span className="absolute inset-y-0 left-0 flex items-center  pl-2">
                 <button
                   type="button"
                   title="search"
@@ -168,7 +168,7 @@ export default function ClientViewProduct({ data }) {
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Search..."
-                className="border py-[10px] pl-10 px-[50px] xl:px-24 2xl:px-24 text-sm rounded-lg !rounded-e-none sm:w-auto focus:outline-none bg-white text-black focus:dark:border-sky-400"
+                className="border w-full py-[10px] pl-10 px-[50px] xl:px-24 2xl:px-24 text-sm rounded-lg !rounded-e-none sm:w-auto focus:outline-none bg-white text-black focus:dark:border-sky-400"
               />
               <button
                 className="  bg-blue-400 py-[9px] px-3 rounded-lg !rounded-s-none"
