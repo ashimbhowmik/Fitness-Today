@@ -84,8 +84,8 @@ const Navber = () => {
 
   return (
     <>
-      <nav className=" fixed w-full z-20 top-0 left-0 shadow  bg-slate-50 text-black py-2">
-        <div className="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto  p-4">
+      <nav className=" fixed w-full z-20 top-0 left-0 shadow  bg-slate-50 text-black lg:py-2">
+        <div className="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto p-3 lg:p-4">
           <div
             onClick={() => router.push("/")}
             className="flex items-cemter cursor-pointer"
