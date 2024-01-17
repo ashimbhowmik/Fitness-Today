@@ -9,11 +9,11 @@ import { useRouter } from "next/navigation";
 const FitnessClass = () => {
   const router = useRouter();
   return (
-    <div className="py-[50px] bg-black">
-      <h1 className=" 2xl:w-[75%] xl:w-[90%] m-auto text-5xl font-bold mb-10 text-[#0E86A6]">
+    <div className="py-[50px]   bg-black">
+      <h1 className=" 2xl:w-[75%] xl:w-[90%] w-[90%] mx-auto m-auto text-5xl font-bold mb-10 text-[#0E86A6]">
         Our Program
       </h1>
-      <main className="2xl:w-[75%] xl:w-[90%] m-auto">
+      <main className="2xl:w-[75%] xl:w-[90%] m-auto w-[90%] mx-auto">
         <section className="grid gap-10 2xl:grid-cols-3 2xl:gap-28 md:grid-cols-2 md:gap-16 lg:grid-cols-3 lg:gap-16 xl:grid-cols-3 xl:gap-16">
           <div className="card z-0 bg-base-100 shadow-xl image-full h-[550px] rounded-xl">
             <figure>

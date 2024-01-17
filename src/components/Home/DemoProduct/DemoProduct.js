@@ -5,8 +5,8 @@ import img2 from "../../../assests/dImage.jpg";
 
 const DemoProduct = () => {
   return (
-    <div className="2xl:py-[100px] py-[50px] bg-black">
-      <main className="2xl:w-[75%] xl:w-[90%] m-auto px-10 lg:px-0">
+    <div className="2xl:py-[100px]  py-[50px] bg-black">
+      <main className="2xl:w-[75%] xl:w-[90%] m-auto w-[90%] lg:px-0">
         <section className="2xl:flex xl:flex xl:gap-20 2xl:gap-0">
           <div className="2xl:w-[50%] xl:w-[50%]  flex flex-col justify-center">
             <div className=" ">
