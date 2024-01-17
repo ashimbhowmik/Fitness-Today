@@ -99,7 +99,7 @@ const ChatModal = () => {
   return (
     <div className="rounded-lg shadow-lg z-[999999]">
       <button
-        className="fixed left-7 bottom-4 w-16 h-16 flex justify-center items-end shadow-lg text-white px-4 py-2 rounded-full  btn btn-active btn-primary focus:outline-none"
+        className="fixed left-[15px] xl:left-[35px]  bottom-[70px] w-16 h-16 flex justify-center items-end shadow-lg text-white px-4 py-2 rounded-full  btn btn-active btn-primary focus:outline-none"
         onClick={toggleModal}
       >
         <svg
@@ -121,7 +121,7 @@ const ChatModal = () => {
       </button>
 
       {isOpen && (
-        <div className="fixed left-[33px] bottom-[90px] w-96 h-96 flex flex-col bg-white p-4 rounded-lg shadow-lg overflow-hidden">
+        <div className="fixed xl:left-[40px] xl:bottom-[137px] left-[13px] bottom-[137px] w-[340px] h-[380px] xl:w-96 xl:h-96 flex flex-col bg-white p-4 rounded-lg shadow-lg overflow-hidden">
           <div className="flex justify-between items-center mb-4">
             <div className="text-xl font-bold text-gray-800">Chat with Bot</div>
             <button
