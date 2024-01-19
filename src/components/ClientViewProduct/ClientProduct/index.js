@@ -86,8 +86,10 @@ export default function ClientProduct({ item }) {
           </button>
         </div>
       </div>
-      <div className="absolute bottom-[-18px] 2xl:left-[123px] lg:left-[95px] left-[30%]">
-        <ClientButton item={item} />
+      <div className="absolute flex justify-center w-full bottom-[-18px] ">
+        <button>
+          <ClientButton item={item} />
+        </button>
       </div>
     </div>
   );

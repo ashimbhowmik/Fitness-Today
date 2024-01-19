@@ -1,7 +1,5 @@
 import Footer from "@/components/Footer/Footer";
-import { GlobalContext } from "@/context/GlobalContext";
-import { useContext } from "react";
-import img from "../assests/img1.jpg"; // Fix the path to your image
+import img from "../assests/img1.jpg";
 import Image from "next/image";
 import FitnessClass from "@/components/Home/FitnessClass/FitnessClass";
 import FitnessMotive from "@/components/Home/FitnessMotive/FitnessMotive";
@@ -24,7 +22,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-black opacity-70"></div>
         </div>
 
-        <div className="absolute left-[15px] top-[100px] xl:left-[14%] 2xl:left-[480px] 2xl:top-[230px] text-white">
+        <div className="absolute w-full top-[100px] 2xl:top-[230px] text-white">
           <div>
             <h1 className="text-2xl md:text-5xl lg:text-6xl xl:text-6xl text-center 2xl:text-6xl font-bold lg:mb-7">
               Transform your life through fitness
@@ -95,7 +93,7 @@ export default function Home() {
             </button>
           </div>
         </div>
-        <div className="absolute hidden lg:block left-[130px] bottom-[160px] xl:left-[46%] xl:bottom-[25%] 2xl:left-[915px] 2xl:bottom-[260px]">
+        <div className="absolute hidden w-full lg:flex justify-center bottom-[160px]  xl:bottom-[35%] 2xl:bottom-[260px]">
           <button className="lg:px-5 px-5 py-1 lg:py-2 hover:bg-orange-500 bg-yellow-500 font-semibold rounded-2xl ease-in-out duration-200">
             Get Started
           </button>
