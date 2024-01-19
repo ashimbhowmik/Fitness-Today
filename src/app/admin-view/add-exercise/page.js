@@ -19,7 +19,7 @@ const AdminAddExercise = () => {
               setView("arms");
             }}
           >
-            Yoga
+            Arm Exercise
           </button>
           <button
             className={`px-8 rounded-lg py-2 border ${
