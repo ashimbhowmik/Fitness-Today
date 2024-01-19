@@ -145,7 +145,7 @@ export default function ClientViewProduct({ data }) {
 
   return (
     <main className="py-12 mt-10 lg:mt-16 sm:py-16 h-full ">
-      <section className="lg:w-[79%] w-[85%]  m-auto  pb-14 border-b lg:flex-row-reverse mb-5 mt-5 xl:flex 2xl:flex flex flex-col gap-5 lg:flex justify-between ">
+      <section className="2xl:w-[80%] w-[85%]  m-auto  pb-14 border-b lg:flex-row-reverse mb-5 mt-5 xl:flex 2xl:flex flex flex-col gap-5 lg:flex justify-between ">
         <div className="xl:flex  rounded-lg">
           <fieldset className="w-full space-y-1  flex justify-center dark:text-gray-100">
             <div className="relative flex items-center w-full   rounded-lg">
@@ -215,8 +215,8 @@ export default function ClientViewProduct({ data }) {
         </button>
       </div>
 
-      <div className=" lg:pt-6  pb-12 sm:px-6 lg:px-8">
-        <div className="mt-10 grid gap-10 2xl:grid-cols-4 2xl:gap-16 md:grid-cols-2 md:gap-16 lg:grid-cols-3 lg:gap-16 xl:grid-cols-3 xl:gap-16 lg:mt-10 w-[82%] m-auto">
+      <div className=" lg:pt-6  pb-12 sm:px-6 2xl:px-8">
+        <div className="mt-10 grid gap-10 2xl:grid-cols-4 2xl:gap-16 md:grid-cols-2 md:gap-16 lg:grid-cols-3 lg:gap-16 xl:grid-cols-3 xl:gap-16 lg:mt-10 w-[82%] xl:w-[88%] 2xl:w-[82%] m-auto">
           {productsToInclude.length ? (
             productsToInclude.map((item) => (
               <ClientProduct
