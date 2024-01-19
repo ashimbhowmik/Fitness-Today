@@ -1,12 +1,9 @@
 export const allRegisterUsers = async () => {
   try {
-    const res = await fetch(
-      "https://extra-project-defence-ashimbhowmik.vercel.app/api/allregisterusers",
-      {
-        method: "GET",
-        cache: "no-store",
-      }
-    );
+    const res = await fetch("www.ownexercise.com/api/allregisterusers", {
+      method: "GET",
+      cache: "no-store",
+    });
 
     const data = await res.json();
 
@@ -40,18 +37,15 @@ export const updateUser = async (formData) => {
 
 export const updateUserRoleChange = async (updatedUser) => {
   try {
-    const res = await fetch(
-      "https://extra-project-defence-ashimbhowmik.vercel.app/api/admin/updateUserRole",
-      {
-        method: "PUT",
-        headers: {
-          "content-type": "application/json",
-          Authorization: `Bearer ${Cookies.get("token")}`,
-        },
-        cache: "no-store",
-        body: JSON.stringify(updatedUser),
-      }
-    );
+    const res = await fetch("www.ownexercise.com/api/admin/updateUserRole", {
+      method: "PUT",
+      headers: {
+        "content-type": "application/json",
+        Authorization: `Bearer ${Cookies.get("token")}`,
+      },
+      cache: "no-store",
+      body: JSON.stringify(updatedUser),
+    });
 
     const data = await res.json();
 
@@ -63,7 +57,7 @@ export const updateUserRoleChange = async (updatedUser) => {
 export const deleteUsers = async (id) => {
   try {
     const res = await fetch(
-      `https://extra-project-defence-ashimbhowmik.vercel.app/api/admin/delete-user?id=${id}`,
+      `www.ownexercise.com/api/admin/delete-user?id=${id}`,
       {
         method: "DELETE",
         headers: {

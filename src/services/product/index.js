@@ -26,13 +26,10 @@ export const addNewProduct = async (formData) => {
 
 export const getAllAdminProducts = async () => {
   try {
-    const res = await fetch(
-      "https://extra-project-defence-ashimbhowmik.vercel.app/api/admin/all-products",
-      {
-        method: "GET",
-        cache: "no-store",
-      }
-    );
+    const res = await fetch("www.ownexercise.com/api/admin/all-products", {
+      method: "GET",
+      cache: "no-store",
+    });
 
     const data = await res.json();
 
@@ -99,7 +96,7 @@ export const deleteAProduct = async (id) => {
 export const productById = async (id) => {
   try {
     const res = await fetch(
-      `https://extra-project-defence-ashimbhowmik.vercel.app/api/admin/product-by-id?id=${id}`,
+      `www.ownexercise.com/api/admin/product-by-id?id=${id}`,
       {
         method: "GET",
         cache: "no-store",
@@ -115,18 +112,15 @@ export const productById = async (id) => {
 
 export const updateUsserOrderStatus = async (userOrders) => {
   try {
-    const res = await fetch(
-      "https://extra-project-defence-ashimbhowmik.vercel.app/api/admin/update-order",
-      {
-        method: "PUT",
-        headers: {
-          "content-type": "application/json",
-          Authorization: `Bearer ${Cookies.get("token")}`,
-        },
-        cache: "no-store",
-        body: JSON.stringify(userOrders),
-      }
-    );
+    const res = await fetch("www.ownexercise.com/api/admin/update-order", {
+      method: "PUT",
+      headers: {
+        "content-type": "application/json",
+        Authorization: `Bearer ${Cookies.get("token")}`,
+      },
+      cache: "no-store",
+      body: JSON.stringify(userOrders),
+    });
 
     const data = await res.json();
 

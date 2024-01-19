@@ -22,13 +22,10 @@ export const addNewDoctor = async (formData) => {
 
 export const getAllDoctors = async () => {
   try {
-    const res = await fetch(
-      "https://extra-project-defence-ashimbhowmik.vercel.app/api/admin/all-doctors",
-      {
-        method: "GET",
-        cache: "no-store",
-      }
-    );
+    const res = await fetch("www.ownexercise.com/api/admin/all-doctors", {
+      method: "GET",
+      cache: "no-store",
+    });
 
     const data = await res.json();
 
@@ -40,13 +37,10 @@ export const getAllDoctors = async () => {
 
 export const searchDoctors = async () => {
   try {
-    const res = await fetch(
-      "https://extra-project-defence-ashimbhowmik.vercel.app/api/admin/all-doctors",
-      {
-        method: "GET",
-        cache: "no-store",
-      }
-    );
+    const res = await fetch("www.ownexercise.com/api/admin/all-doctors", {
+      method: "GET",
+      cache: "no-store",
+    });
 
     const data = await res.json();
 
@@ -59,7 +53,7 @@ export const searchDoctors = async () => {
 export const deleteDoctor = async (id) => {
   try {
     const res = await fetch(
-      `https://extra-project-defence-ashimbhowmik.vercel.app/api/admin/delete-doctor?id=${id}`,
+      `www.ownexercise.com/api/admin/delete-doctor?id=${id}`,
       {
         method: "DELETE",
         headers: {
@@ -79,7 +73,7 @@ export const deleteDoctor = async (id) => {
 export const doctorById = async (id) => {
   try {
     const res = await fetch(
-      `https://extra-project-defence-ashimbhowmik.vercel.app/api/admin/doctor-by-id?id=${id}`,
+      `www.ownexercise.com/api/admin/doctor-by-id?id=${id}`,
       {
         method: "GET",
         cache: "no-store",
@@ -96,18 +90,15 @@ export const doctorById = async (id) => {
 
 export const doctorListed = async (updatedUser) => {
   try {
-    const res = await fetch(
-      "https://extra-project-defence-ashimbhowmik.vercel.app/api/admin/update-doctor",
-      {
-        method: "PUT",
-        headers: {
-          "content-type": "application/json",
-          Authorization: `Bearer ${Cookies.get("token")}`,
-        },
-        cache: "no-store",
-        body: JSON.stringify(updatedUser),
-      }
-    );
+    const res = await fetch("www.ownexercise.com/api/admin/update-doctor", {
+      method: "PUT",
+      headers: {
+        "content-type": "application/json",
+        Authorization: `Bearer ${Cookies.get("token")}`,
+      },
+      cache: "no-store",
+      body: JSON.stringify(updatedUser),
+    });
 
     const data = await res.json();
 

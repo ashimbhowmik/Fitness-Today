@@ -2,17 +2,14 @@ import Cookies from "js-cookie";
 
 export const addNewAddress = async (formData) => {
   try {
-    const res = await fetch(
-      "https://extra-project-defence-ashimbhowmik.vercel.app/api/address/add-new-address",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${Cookies.get("token")}`,
-        },
-        body: JSON.stringify(formData),
-      }
-    );
+    const res = await fetch("www.ownexercise.com/api/address/add-new-address", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${Cookies.get("token")}`,
+      },
+      body: JSON.stringify(formData),
+    });
 
     const data = await res.json();
 
@@ -25,7 +22,7 @@ export const addNewAddress = async (formData) => {
 export const fetchAllAddresses = async (id) => {
   try {
     const res = await fetch(
-      `https://extra-project-defence-ashimbhowmik.vercel.app/api/address/get-all-address?id=${id}`,
+      `www.ownexercise.com/api/address/get-all-address?id=${id}`,
       {
         method: "GET",
         headers: {
@@ -44,13 +41,10 @@ export const fetchAllAddresses = async (id) => {
 
 export const getAllAddress = async () => {
   try {
-    const res = await fetch(
-      "https://extra-project-defence-ashimbhowmik.vercel.app/api/address/get-address",
-      {
-        method: "GET",
-        cache: "no-store",
-      }
-    );
+    const res = await fetch("www.ownexercise.com/api/address/get-address", {
+      method: "GET",
+      cache: "no-store",
+    });
 
     const data = await res.json();
 
@@ -62,17 +56,14 @@ export const getAllAddress = async () => {
 
 export const updateAddress = async (formData) => {
   try {
-    const res = await fetch(
-      "https://extra-project-defence-ashimbhowmik.vercel.app/api/address/update-address",
-      {
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${Cookies.get("token")}`,
-        },
-        body: JSON.stringify(formData),
-      }
-    );
+    const res = await fetch("www.ownexercise.com/api/address/update-address", {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${Cookies.get("token")}`,
+      },
+      body: JSON.stringify(formData),
+    });
 
     const data = await res.json();
 
