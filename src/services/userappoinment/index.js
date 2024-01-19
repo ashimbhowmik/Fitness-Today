@@ -22,10 +22,13 @@ export const newAppoinmentUser = async (formData) => {
 
 export const getAllAppoinment = async () => {
   try {
-    const res = await fetch("www.ownexercise.com/api/admin/all-appoinment", {
-      method: "GET",
-      cache: "no-store",
-    });
+    const res = await fetch(
+      "https://www.ownexercise.com/api/admin/all-appoinment",
+      {
+        method: "GET",
+        cache: "no-store",
+      }
+    );
 
     const data = await res.json();
 
@@ -38,7 +41,7 @@ export const getAllAppoinment = async () => {
 export const deleteAppoinment = async (id) => {
   try {
     const res = await fetch(
-      `www.ownexercise.com/api/admin/delete-appoinment?id=${id}`,
+      `https://www.ownexercise.com/api/admin/delete-appoinment?id=${id}`,
       {
         method: "DELETE",
         headers: {

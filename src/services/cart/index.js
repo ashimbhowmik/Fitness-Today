@@ -22,7 +22,7 @@ export const addToCart = async (formData) => {
 export const getAllCartItems = async (id) => {
   try {
     const res = await fetch(
-      `www.ownexercise.com/api/cart/all-cart-items?id=${id}`,
+      `https://www.ownexercise.com/api/cart/all-cart-items?id=${id}`,
       {
         method: "GET",
         headers: {
@@ -40,10 +40,13 @@ export const getAllCartItems = async (id) => {
 };
 export const getAllOrder = async () => {
   try {
-    const res = await fetch("www.ownexercise.com/api/cart/get-all-order", {
-      method: "GET",
-      cache: "no-store",
-    });
+    const res = await fetch(
+      "https://www.ownexercise.com/api/cart/get-all-order",
+      {
+        method: "GET",
+        cache: "no-store",
+      }
+    );
 
     const data = await res.json();
 
