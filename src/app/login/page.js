@@ -92,7 +92,7 @@ const Login = () => {
                 loading={componentLevelLoader && componentLevelLoader.loading}
               />
             ) : (
-              <div className="flex px-7 pb-7 2xl:w-[50%] xl:w-[65%] flex-col items-center justify-start xl:px-10 xl:pb-6 2xl:pr-16 2xl:pb-12 2xl:pl-16 bg-white text-black shadow-md rounded-xl relative  mt-[70px]">
+              <div className="flex px-7 pb-7 2xl:w-[50%] xl:w-[65%] flex-col items-center justify-start xl:px-10 xl:pb-6 2xl:pr-16 2xl:pb-12 2xl:pl-16 bg-white text-black shadow-md rounded-xl relative mt-[25px] lg:mt-[70px]">
                 <div className="">
                   <Image
                     src={img1}

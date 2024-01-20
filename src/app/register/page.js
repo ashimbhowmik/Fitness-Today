@@ -109,14 +109,14 @@ const Register = () => {
 
   return (
     <div className="bg-[#EDF4FF] 2xl:pt-32 xl:pt-24 flex flex-col pb-[200px]">
-      <div className="lg:flex px-5 lg:px-16 mt-14 lg:mt-0 pb-8">
+      <div className="lg:flex px-6 lg:px-16 mt-14 lg:mt-0 pb-8">
         <div className="flex-1 hidden lg:flex justify-center items-center ">
           <Image src={img} alt="" fill={false} className={styles.imgae}></Image>
         </div>
 
         {/* from */}
         <div className="flex-1 flex justify-center items-center">
-          <div className="flex 2xl:w-[55%] xl:w-[70%] flex-col items-center justify-start px-7 2xl:pr-16  lg:pb-10 pb-5 xl:px-14 2xl:pl-16 bg-white text-black shadow-md rounded-xl relative mt-[40px]">
+          <div className="flex 2xl:w-[55%] xl:w-[70%] flex-col items-center justify-start px-7 2xl:pr-16  lg:pb-10 pb-5 xl:px-14 2xl:pl-16 bg-white text-black shadow-md rounded-xl relative mt-[25px] lg:mt-[40px]">
             <Image
               src={img1}
               alt=""
@@ -124,7 +124,7 @@ const Register = () => {
               className="2xl:h-[200px] 2xl:w-[200px] h-[120px] w-[120px]"
             ></Image>
 
-            <p className="w-full text-4xl mb-6 font-medium text-center font-serif">
+            <p className="w-full text-3xl lg:text-4xl mb-6 font-medium text-center font-serif">
               {isRegistered ? "Registration Successfull !" : "Registration"}
             </p>
 
