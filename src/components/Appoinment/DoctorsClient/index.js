@@ -8,7 +8,7 @@ import Footer from "@/components/Footer/Footer";
 export default function DoctorsClient({ data }) {
   return (
     <main>
-      <section className="mt-36 h-full lg:w-[80%] m-auto ">
+      <section className="lg:mt-36 mt-[70px] h-full lg:w-[80%] m-auto ">
         <section>
           <Banner></Banner>
           <InfoCards></InfoCards>

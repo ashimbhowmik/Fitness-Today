@@ -20,7 +20,7 @@ const FitnessClass = () => {
               <Image src={img1} alt="" objectFit="cover" />
             </figure>
             <div className="card-body">
-              <h2 className="card-title mt-[230px] mb-2 text-white">Yoga</h2>
+              <h2 className="card-title mt-[230px] mb-2 text-white">Arm</h2>
               <p className="text-white">
                 Yoga fosters physical and mental well-being through a
                 combination of stretches, poses, and mindfulness, enhancing

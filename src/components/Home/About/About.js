@@ -58,9 +58,10 @@ const About = () => {
                 </a>
                 <a
                   rel="noopener noreferrer"
-                  href="#"
+                  href="https://www.linkedin.com/in/ashimbhowmik/"
                   title="LinkedIn"
                   className="text-black  hover:dark:text-violet-400"
+                  target="blank"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -73,9 +74,10 @@ const About = () => {
                 </a>
                 <a
                   rel="noopener noreferrer"
-                  href="#"
+                  href="https://github.com/ashimbhowmik"
                   title="GitHub"
                   className="text-black  hover:dark:text-violet-400"
+                  target="_blank"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

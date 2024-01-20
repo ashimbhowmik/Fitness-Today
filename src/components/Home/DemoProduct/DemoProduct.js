@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import img1 from "../../../assests/Equp.jpg";
-import img2 from "../../../assests/dImage.jpg";
+import img2 from "../../../assests/dd_pic.jpg";
 
 const DemoProduct = () => {
   return (
@@ -59,7 +59,7 @@ const DemoProduct = () => {
               objectFit="cover"
               className="rounded-xl h-[500px] 2xl:w-[600px] xl:w-[600px] mt-8 lg:mt-0"
             />
-            <div className="absolute inset-0 bg-black opacity-30"></div>
+            <div className="absolute inset-0 bg-black opacity-0"></div>
           </div>
         </section>
       </main>

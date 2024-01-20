@@ -6,9 +6,9 @@ const Footer = () => {
       <footer className="footer footer-center p-10 bg-[#0f0f0f] text-base-content ">
         <div className="grid grid-flow-col gap-4 text-white">
           <a className="link link-hover">About us</a>
-          <a className="link link-hover">Contact</a>
-          <a className="link link-hover">Jobs</a>
-          <a className="link link-hover">Press kit</a>
+          <a className="link link-hover">Appointment</a>
+          <a className="link link-hover">Fitness</a>
+          <a className="link link-hover">Product</a>
         </div>
         <div>
           <div className="grid grid-flow-col gap-4 text-white">
@@ -49,7 +49,7 @@ const Footer = () => {
         </div>
         <div>
           <p className="text-white">
-            Copyright © 2022 - All right reserved by Ashim Bhowmik Amit
+            Copyright © 2023 - All right reserved by Ashim Bhowmik Amit
           </p>
         </div>
       </footer>

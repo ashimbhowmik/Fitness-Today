@@ -17,7 +17,7 @@ const AppoinmentBanner = ({ item }) => {
             <img
               src={item.imageUrl}
               alt="Dcotor image"
-              className="rounded-lg lg:absolute h-[370px] w-[380px]  lg:right-[150px] lg:top-[80px] shadow-2xl"
+              className="rounded-lg lg:absolute h-[370px] w-[380px] xl:right-[80px]  2xl:right-[150px] lg:top-[80px] shadow-2xl"
             />
           </div>
           <div className="lg:w-1/2 lg:mt-12 mt-5 px-4">
