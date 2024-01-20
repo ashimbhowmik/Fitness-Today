@@ -1,4 +1,3 @@
-"use client";
 import Footer from "@/components/Footer/Footer";
 import img from "../assests/img1.jpg";
 import Image from "next/image";
@@ -10,7 +9,6 @@ import Pricing from "@/components/Home/Pricing";
 import { useRouter } from "next/navigation";
 
 export default function Home() {
-  const router = useRouter();
   return (
     <main>
       <section className="relative lg:mt-[99px] mt-[50px]">
@@ -39,8 +37,8 @@ export default function Home() {
           <div className="flex flex-col">
             <button>
               <a
-                href="https://www.facebook.com/ashim.bhowmik.amit.2000"
-                target="blank"
+              // href="https://www.facebook.com/ashim.bhowmik.amit.2000"
+              // target="blank"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -61,8 +59,8 @@ export default function Home() {
             </button>
             <button>
               <a
-                href="https://www.instagram.com/ashim.bhowmik.amit/"
-                target="blank"
+              // href="https://www.instagram.com/ashim.bhowmik.amit/"
+              // target="blank"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -85,8 +83,8 @@ export default function Home() {
             </button>
             <button>
               <a
-                href="https://www.linkedin.com/in/ashimbhowmik/"
-                target="blank"
+              // href="https://www.linkedin.com/in/ashimbhowmik/"
+              // target="blank"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -112,12 +110,7 @@ export default function Home() {
           </div>
         </div>
         <div className="absolute w-full flex justify-center bottom-[120px]  xl:bottom-[35%] 2xl:bottom-[260px]">
-          <button
-            onClick={() => {
-              router.push("/product/listing/fitness");
-            }}
-            className="lg:px-5 px-5 py-1 lg:py-2 hover:bg-orange-500 bg-yellow-500 font-semibold rounded-2xl ease-in-out duration-200"
-          >
+          <button className="lg:px-5 px-5 py-1 lg:py-2 hover:bg-orange-500 bg-yellow-500 font-semibold rounded-2xl ease-in-out duration-200">
             Get Started
           </button>
         </div>
