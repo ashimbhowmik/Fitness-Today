@@ -20,6 +20,11 @@ export const navOptions = [
     label: "Appoinments",
     path: "/product/listing/appoinments",
   },
+  {
+    id: "listingUser",
+    label: "View Appoinment",
+    path: "/product/listing/viewAppointment",
+  },
 ];
 
 export const adminNavOptions = [

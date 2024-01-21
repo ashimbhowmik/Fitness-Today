@@ -10,7 +10,7 @@ export async function DELETE(req) {
     await connectToDB();
     const isAuthUser = await AuthUser(req);
 
-    if (isAuthUser?.role === "admin" || isAuthUser?.role === "developer") {
+    if (isAuthUser) {
       // update url a jeye hit korbe
       const { searchParams } = new URL(req.url);
       const id = searchParams.get("id");
