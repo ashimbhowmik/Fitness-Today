@@ -12,6 +12,27 @@ import PageLoader from "../Loader/PageLoader/PageLoader";
 const UserAppoinmetPart = () => {
   const { user } = useContext(GlobalContext);
   const [loading, setLoading] = useState(true);
+  const [userAppointments, setUserAppointments] = useState([]);
+
+  useEffect(() => {
+    const fetchUserAppointments = async () => {
+      if (user?.name) {
+        try {
+          const response = await getAllAppoinment();
+          const appointments = response?.data?.filter(
+            (appointment) => appointment?.name === user?.name
+          );
+          setUserAppointments(appointments || []);
+          setLoading(false);
+        } catch (error) {
+          console.error("Error fetching user appointments:", error);
+          setLoading(false);
+        }
+      }
+    };
+
+    fetchUserAppointments();
+  }, [user]);
 
   if (!user?.name) {
     return (
@@ -39,29 +60,6 @@ const UserAppoinmetPart = () => {
       </div>
     );
   }
-  const [userAppointments, setUserAppointments] = useState(null);
-
-  useEffect(() => {
-    const fetchUserAppointments = async () => {
-      if (user?.name) {
-        try {
-          setTimeout(async () => {
-            const response = await getAllAppoinment();
-            const appointments = response?.data?.filter(
-              (appointment) => appointment?.name === user?.name
-            );
-            setUserAppointments(appointments || []);
-            setLoading(false); // Set loading to false when data is loaded
-          }, 1000);
-        } catch (error) {
-          console.error("Error fetching user appointments:", error);
-          setLoading(false); // Set loading to false even if there's an error
-        }
-      }
-    };
-
-    fetchUserAppointments();
-  }, [user]);
 
   return (
     <div className="lg:pt-[100px] pt-[50px]">
@@ -94,7 +92,7 @@ const UserAppoinmetPart = () => {
               </p>
             </div>
           </div>
-          {userAppointments.length > 0 ? (
+          {userAppointments && userAppointments.length > 0 ? (
             <>
               <h2 className="text-center mt-10 text-3xl font-bold">
                 Your Appointments
