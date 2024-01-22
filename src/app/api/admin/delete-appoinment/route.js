@@ -26,7 +26,7 @@ export async function DELETE(req) {
       if (deleteAppoinmentId) {
         return NextResponse.json({
           success: true,
-          message: "Product deleted successfully",
+          message: "Appoinment Delete Successfully",
         });
       } else {
         return NextResponse.json({
