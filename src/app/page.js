@@ -23,7 +23,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-black opacity-70"></div>
         </div>
 
-        <div className="absolute w-full top-[100px] 2xl:top-[230px] text-white">
+        <div className="absolute w-full top-[110px] xl:top-[140px] 2xl:top-[240px] text-white">
           <div>
             <h1 className="text-2xl md:text-5xl lg:text-6xl xl:text-6xl text-center 2xl:text-6xl font-bold lg:mb-7">
               Transform your life through fitness
@@ -108,11 +108,6 @@ export default function Home() {
               </a>
             </button>
           </div>
-        </div>
-        <div className="absolute w-full flex justify-center bottom-[120px]  xl:bottom-[35%] 2xl:bottom-[260px]">
-          <button className="lg:px-5 px-5 py-1 lg:py-2 hover:bg-orange-500 bg-yellow-500 font-semibold rounded-2xl ease-in-out duration-200">
-            Get Started
-          </button>
         </div>
       </section>
       <Pricing></Pricing>
