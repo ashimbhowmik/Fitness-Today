@@ -271,32 +271,34 @@ const GraphChart = ({
           </div>
         </div>
       </section>
-      <section className="2xl:flex 2xl:hidden rounded-lg 2xl:px-0 gap-10 mt-10">
-        <div className="flex-1 rounded-lg xl:mb-10 2xl:mb-0">
-          {userData && userData?.length > 0 && (
-            <table className="table-auto rounded-lg w-full">
-              <thead>
-                <tr className="text-center bg-gray-200">
-                  <th></th>
-                  <th className="py-5">Name</th>
-                  <th className="py-5">Email</th>
-                  <th className="py-5">Role</th>
-                </tr>
-              </thead>
-              <tbody className="shadow-md rounded-lg bg-white">
-                {userData?.slice(0, 8)?.map((user, index) => (
-                  <tr key={index} className="text-center border-b">
-                    <td className="py-6 px-3">{index + 1}</td>
-                    <td className="py-6 px-3 ">{user.name}</td>
-                    <td className="py-6 px-3">{user.email}</td>
-                    <td className="py-6 px-3">{user.role}</td>
+      <div className="2xl:hidden">
+        <section className="2xl:flex  rounded-lg 2xl:px-0 gap-10 mt-10">
+          <div className="flex-1 rounded-lg xl:mb-10 2xl:mb-0">
+            {userData && userData?.length > 0 && (
+              <table className="table-auto rounded-lg w-full">
+                <thead>
+                  <tr className="text-center bg-gray-200">
+                    <th></th>
+                    <th className="py-5">Name</th>
+                    <th className="py-5">Email</th>
+                    <th className="py-5">Role</th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
-          )}
-        </div>
-      </section>
+                </thead>
+                <tbody className="shadow-md rounded-lg bg-white">
+                  {userData?.slice(0, 8)?.map((user, index) => (
+                    <tr key={index} className="text-center border-b">
+                      <td className="py-6 px-3">{index + 1}</td>
+                      <td className="py-6 px-3 ">{user.name}</td>
+                      <td className="py-6 px-3">{user.email}</td>
+                      <td className="py-6 px-3">{user.role}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            )}
+          </div>
+        </section>
+      </div>
     </div>
   );
 };

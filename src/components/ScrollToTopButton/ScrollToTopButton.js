@@ -36,7 +36,7 @@ const ScrollToTopButton = () => {
     <button
       className={`${
         isVisible ? "opacity-100" : "opacity-0"
-      } fixed bottom-[80px] lg:right-14 right-6 p-2 rounded bg-blue-500 text-white`}
+      } fixed 2xl:bottom-[80px] xl:bottom-[30px] bottom-[80px] lg:right-14 right-6 p-2 rounded bg-blue-500 text-white`}
       onClick={scrollToTop}
     >
       <svg
