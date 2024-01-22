@@ -23,9 +23,9 @@ export default function AppoinmentDelete({ item }) {
       toast.success(res.message, {
         position: toast.POSITION.TOP_CENTER,
       });
-      // setTimeout(() => {
-      //   location.reload();
-      // }, 1000);
+      setTimeout(() => {
+        location.reload();
+      }, 1000);
       router.refresh();
     } else {
       toast.error(res.message, {
