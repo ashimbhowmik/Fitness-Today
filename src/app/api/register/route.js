@@ -5,7 +5,12 @@ import Joi from "joi";
 import { NextResponse } from "next/server";
 import RegUsers from "@/models/reg-users";
 
-const validEmailDomains = ["gmail.com", "diu.edu.bd"]; // Add more valid domains as needed
+const validEmailDomains = [
+  "gmail.com",
+  "diu.edu.bd",
+  "brac.edu.bd",
+  "yahoo.com",
+]; // Add more valid domains as needed
 
 const schema = Joi.object({
   name: Joi.string().required(),
