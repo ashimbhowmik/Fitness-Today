@@ -154,58 +154,127 @@ const GraphChart = ({
   }, [productData, orderData]);
 
   return (
-    <div>
-      <section className="flex justify-center gap-14 mt-14">
-        <div className="flex flex-col gap-5 p-[32px]  shadow-md rounded-lg bg-white">
-          <h1 className="text-xl font-bold text-center ">Total Activity</h1>
-          <div className="h-[2px] bg-black w-full"></div>
-          <React.Suspense>
-            {typeof window !== "undefined" &&
-              userData &&
-              orderData &&
-              appointmentData && (
-                <Chart
-                  options={state.options}
-                  series={state.series}
-                  type="area"
-                  width="500"
-                />
-              )}
-          </React.Suspense>
-        </div>
-        <div className="flex flex-col gap-5 p-[32px]  shadow-md rounded-lg bg-white">
-          <h1 className="text-xl font-bold text-center ">Total Panding</h1>
-          <div className="h-[2px] bg-black w-full"></div>
-          <React.Suspense>
-            {typeof window !== "undefined" && orderData && (
-              <Chart
-                options={orderstate.options}
-                series={orderstate.series}
-                type="bar"
-                width="500"
-              />
-            )}
-          </React.Suspense>
-        </div>
-        <div className="flex flex-col gap-5 p-[32px] shadow-md rounded-lg bg-white">
-          <h1 className="text-xl font-bold text-center">Total Drop Price</h1>
-          <div className="h-[2px] bg-black w-full"></div>
-          <React.Suspense>
-            {typeof window !== "undefined" && productData && orderData && (
-              <Chart
-                options={dstate.options}
-                series={dstate.series}
-                type="donut"
-                width="450"
-              />
-            )}
-          </React.Suspense>
+    <div className="">
+      <section className=" justify-center 2xl:gap-14 mt-10">
+        <div className="">
+          <div className="flex justify-between mb-10">
+            <div className="flex flex-col gap-5 p-[32px]  shadow-md rounded-lg bg-white">
+              <h1 className="text-xl font-bold text-center ">Total Activity</h1>
+              <div className="h-[2px] bg-black w-full"></div>
+              <React.Suspense>
+                {typeof window !== "undefined" &&
+                  userData &&
+                  orderData &&
+                  appointmentData && (
+                    <Chart
+                      options={state.options}
+                      series={state.series}
+                      type="area"
+                      width="400"
+                    />
+                  )}
+              </React.Suspense>
+            </div>
+            <div className="flex flex-col gap-5 p-[32px]  shadow-md rounded-lg bg-white">
+              <h1 className="text-xl font-bold text-center ">Total Panding</h1>
+              <div className="h-[2px] bg-black w-full"></div>
+              <React.Suspense>
+                {typeof window !== "undefined" && orderData && (
+                  <Chart
+                    options={orderstate.options}
+                    series={orderstate.series}
+                    type="bar"
+                    width="400"
+                  />
+                )}
+              </React.Suspense>
+            </div>
+            <div className="hidden 2xl:block">
+              <div className="flex flex-col gap-5 p-[32px]  shadow-md rounded-lg bg-white">
+                <h1 className="text-center text-xl font-bold">Total Price</h1>
+                <div className="h-[2px] bg-black w-full"></div>
+                <React.Suspense>
+                  {typeof window !== "undefined" &&
+                    productData &&
+                    orderData && (
+                      <Chart
+                        options={pstate.options}
+                        series={pstate.series}
+                        type="bar"
+                        width="400"
+                      />
+                    )}
+                </React.Suspense>
+              </div>
+            </div>
+          </div>
+
+          <div className="flex justify-between 2xl:justify-normal 2xl:gap-9">
+            <div className="hidden 2xl:w-[70%] 2xl:block">
+              <section className="2xl:flex  rounded-lg 2xl:px-0 gap-10">
+                <div className="flex-1 rounded-lg xl:mb-10 2xl:mb-0">
+                  {userData && userData?.length > 0 && (
+                    <table className="table-auto rounded-lg w-full">
+                      <thead>
+                        <tr className="text-center bg-gray-200">
+                          <th></th>
+                          <th className="py-5">Name</th>
+                          <th className="py-5">Email</th>
+                          <th className="py-5">Role</th>
+                        </tr>
+                      </thead>
+                      <tbody className="shadow-md rounded-lg bg-white">
+                        {userData?.slice(0, 5)?.map((user, index) => (
+                          <tr key={index} className="text-center border-b">
+                            <td className="py-6 px-3">{index + 1}</td>
+                            <td className="py-6 px-3 ">{user.name}</td>
+                            <td className="py-6 px-3">{user.email}</td>
+                            <td className="py-6 px-3">{user.role}</td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  )}
+                </div>
+              </section>
+            </div>
+            <div className="flex flex-col gap-5 p-[32px] shadow-md rounded-lg bg-white">
+              <h1 className="text-xl font-bold text-center">
+                Total Drop Price
+              </h1>
+              <div className="h-[2px] bg-black w-full"></div>
+              <React.Suspense>
+                {typeof window !== "undefined" && productData && orderData && (
+                  <Chart
+                    options={dstate.options}
+                    series={dstate.series}
+                    type="donut"
+                    width="400"
+                  />
+                )}
+              </React.Suspense>
+            </div>
+            <div className="flex 2xl:hidden flex-col gap-5 p-[32px]  shadow-md rounded-lg bg-white">
+              <h1 className="text-center text-xl font-bold">Total Price</h1>
+              <div className="h-[2px] bg-black w-full"></div>
+              <React.Suspense>
+                {typeof window !== "undefined" && productData && orderData && (
+                  <Chart
+                    options={pstate.options}
+                    series={pstate.series}
+                    type="bar"
+                    width="400"
+                  />
+                )}
+              </React.Suspense>
+            </div>
+          </div>
         </div>
       </section>
-      <section className="flex gap-10 mt-14">
-        <div className="flex-1">
+      <section className="2xl:flex 2xl:hidden rounded-lg 2xl:px-0 gap-10 mt-10">
+        <div className="flex-1 rounded-lg xl:mb-10 2xl:mb-0">
           {userData && userData?.length > 0 && (
-            <table className="table-auto w-full">
+            <table className="table-auto rounded-lg w-full">
               <thead>
                 <tr className="text-center bg-gray-200">
                   <th></th>
@@ -226,21 +295,6 @@ const GraphChart = ({
               </tbody>
             </table>
           )}
-        </div>
-
-        <div className="flex-1 flex flex-col gap-5 p-[25px] shadow-md rounded-lg bg-white">
-          <h1 className="text-center text-xl font-bold">Total Price</h1>
-          <div className="h-[2px] bg-black w-full"></div>
-          <React.Suspense>
-            {typeof window !== "undefined" && productData && orderData && (
-              <Chart
-                options={pstate.options}
-                series={pstate.series}
-                type="bar"
-                width="800"
-              />
-            )}
-          </React.Suspense>
         </div>
       </section>
     </div>

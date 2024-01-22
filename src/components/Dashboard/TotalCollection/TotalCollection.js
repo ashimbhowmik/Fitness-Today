@@ -9,7 +9,7 @@ const TotalCollection = ({
 }) => {
   return (
     <div>
-      <section className=" grid grid-cols-5 gap-5">
+      <section className="grid grid-cols-3 2xl:grid-cols-5 gap-5 overflow-x-hidden">
         <div className="flex flex-col bg-white justify-center items-center p-10 shadow-md rounded-lg">
           <p className="text-3xl mb-2 text-red-500 font-bold">
             {dcotorData?.length}

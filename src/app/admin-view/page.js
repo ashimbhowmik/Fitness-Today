@@ -14,7 +14,7 @@ export default async function AdminView() {
   const totalDoctorCollection = await getAllDoctors();
   const totalAppoinmentCollection = await getAllAppoinment();
   return (
-    <div className="flex flex-col w-full py-[150px]">
+    <div className="flex px-20 flex-col w-full py-[120px]">
       <section className=" ">
         <h1 className="text-2xl mb-8 font-bold">Dashboard</h1>
         <div className="">
