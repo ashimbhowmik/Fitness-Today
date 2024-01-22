@@ -88,12 +88,12 @@ const Register = () => {
         error.message === "Unexpected end of JSON input"
       ) {
         // Show an alert for this specific error
-        toast.error("Registration failed. Please try again later.", {
+        toast.error("Please Input Valid Email Format.", {
           position: toast.POSITION.TOP_CENTER,
         });
       } else {
         // Show a generic error toast for other errors
-        toast.error("Registration failed. Please try again later.", {
+        toast.error("Please Input Valid Email Format.", {
           position: toast.POSITION.TOP_CENTER,
         });
       }
